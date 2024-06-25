@@ -10,8 +10,6 @@ fi
 find_firefox_profiles() {
   if [ -d "$HOME/.mozilla/firefox" ]; then
     echo "$HOME/.mozilla/firefox"
-  elif [ -d "$HOME/snap/firefox/common/.mozilla/firefox" ]; then
-    echo "$HOME/snap/firefox/common/.mozilla/firefox"
   else
     echo "Firefox profile directory not found. Ensure Firefox is installed."
     exit 1
