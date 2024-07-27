@@ -100,3 +100,17 @@ This script performs the following steps:
 ---
 
 By following these instructions, you should be able to set up and run the Chromium password recovery script successfully. If you have any questions or run into issues, feel free to open an issue in the repository.
+
+# Define the path to the Brave Browser user data directory
+$braveUserDataPath = "$env:USERPROFILE\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default"
+
+# Define the paths to the Login Data and Login Data.bak files
+$loginDataPath = Join-Path -Path $braveUserDataPath -ChildPath "Login Data"
+$loginDataBackupPath = Join-Path -Path $braveUserDataPath -ChildPath "Login Data.bak"
+
+# Check if the Login Data.bak file exists
+if (Test-Path -Path $loginDataBackupPath) {
+    Write-Output "The backup file 'Login Data.bak' exists at path: $loginDataBackupPath"
+} else {
+    Write-Output "The backup file 'Login Data.bak' does not exist."
+}
