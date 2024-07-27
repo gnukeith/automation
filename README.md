@@ -1,6 +1,7 @@
 # automation
 basic shit i use for automation and just wanted to open-source them.
 
+```py
 import os
 import json
 import base64
@@ -48,3 +49,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
